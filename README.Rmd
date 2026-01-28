@@ -13,12 +13,11 @@ knitr::opts_chunk$set(
 )
 ```
 
-# retroPal
-
+# retroPal <img src="man/figures/retroPal_hex.png" align="right" width="120" />
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of retroPal is to ...
+For a good style, retroPal is your new friend when it comes to graph and data visualization in R.
 
 ## Installation
 
@@ -34,26 +33,117 @@ remotes::install_github("harrychown/retroPal")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example of the "brown" colourscheme
 
 ```{r example}
-devtools::load_all()
-## basic example code
-retro_pals$retro_three_categories
+library(ggplot2)
+library(retroPal)
+ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + geom_bar() + scale_fill_manual(values = get_retro_pal("brown")[c(2,4,6)]) 
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+You can also use the in-built ggplot scales
 
-```{r cars}
-summary(cars)
+```{r example2}
+library(ggplot2)
+library(retroPal)
+ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + geom_bar() + scale_fill_retro("mid4") 
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
 
-You can also embed plots, for example:
+## Colour palettes
 
-```{r pressure, echo = FALSE}
-plot(pressure)
+### Orange
+
+```{r orange}
+library("hues")
+swatch(get_retro_pal("orange"))
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+### Green
+
+```{r green}
+library("hues")
+swatch(get_retro_pal("green"))
+```
+
+### Blue
+
+```{r blue}
+library("hues")
+swatch(get_retro_pal("blue"))
+```
+
+### Red
+
+```{r red}
+library("hues")
+swatch(get_retro_pal("red"))
+```
+
+
+### Yellow
+
+```{r yellow}
+library("hues")
+swatch(get_retro_pal("yellow"))
+```
+
+
+### Purple
+
+```{r purple}
+library("hues")
+swatch(get_retro_pal("purple"))
+```
+
+
+### Brown
+
+```{r brown}
+library("hues")
+swatch(get_retro_pal("brown"))
+```
+
+
+### Grey
+
+```{r grey}
+library("hues")
+swatch(get_retro_pal("grey"))
+```
+
+
+### Mid - 3
+
+```{r mid3}
+library("hues")
+swatch(get_retro_pal("mid3"))
+```
+
+### Mid - 4
+
+```{r mid4}
+library("hues")
+swatch(get_retro_pal("mid4"))
+```
+
+### Dark - 5
+
+```{r dark5}
+library("hues")
+swatch(get_retro_pal("dark5"))
+```
+
+### Dark - 6
+
+```{r dark6}
+library("hues")
+swatch(get_retro_pal("dark6"))
+```
+
+### Categorical
+
+```{r categorical}
+library("hues")
+swatch(get_retro_pal("categorical"))
+```

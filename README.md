@@ -1,13 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# retroPal
+# retroPal <img src="man/figures/retroPal_hex.png" align="right" width="120" />
 
 <!-- badges: start -->
 
 <!-- badges: end -->
 
-The goal of retroPal is to …
+For a good style, retroPal is your new friend when it comes to graph and
+data visualization in R.
 
 ## Installation
 
@@ -23,36 +24,141 @@ remotes::install_github("harrychown/retroPal")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example of the “brown” colourscheme
 
 ``` r
-devtools::load_all()
-#> ℹ Loading retroPal
-## basic example code
-retro_pals$retro_three_categories
-#> NULL
+library(ggplot2)
+library(retroPal)
+ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + geom_bar() + scale_fill_manual(values = get_retro_pal("brown")[c(2,4,6)]) 
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+<img src="man/figures/README-example-1.png" width="100%" />
+
+You can also use the in-built ggplot scales
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+library(ggplot2)
+library(retroPal)
+ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + geom_bar() + scale_fill_retro("mid4") 
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
+<img src="man/figures/README-example2-1.png" width="100%" />
 
-You can also embed plots, for example:
+## Colour palettes
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+### Orange
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+``` r
+library("hues")
+swatch(get_retro_pal("orange"))
+```
+
+<img src="man/figures/README-orange-1.png" width="100%" />
+
+### Green
+
+``` r
+library("hues")
+swatch(get_retro_pal("green"))
+```
+
+<img src="man/figures/README-green-1.png" width="100%" />
+
+### Blue
+
+``` r
+library("hues")
+swatch(get_retro_pal("blue"))
+```
+
+<img src="man/figures/README-blue-1.png" width="100%" />
+
+### Red
+
+``` r
+library("hues")
+swatch(get_retro_pal("red"))
+```
+
+<img src="man/figures/README-red-1.png" width="100%" />
+
+### Yellow
+
+``` r
+library("hues")
+swatch(get_retro_pal("yellow"))
+```
+
+<img src="man/figures/README-yellow-1.png" width="100%" />
+
+### Purple
+
+``` r
+library("hues")
+swatch(get_retro_pal("purple"))
+```
+
+<img src="man/figures/README-purple-1.png" width="100%" />
+
+### Brown
+
+``` r
+library("hues")
+swatch(get_retro_pal("brown"))
+```
+
+<img src="man/figures/README-brown-1.png" width="100%" />
+
+### Grey
+
+``` r
+library("hues")
+swatch(get_retro_pal("grey"))
+```
+
+<img src="man/figures/README-grey-1.png" width="100%" />
+
+### Mid - 3
+
+``` r
+library("hues")
+swatch(get_retro_pal("mid3"))
+```
+
+<img src="man/figures/README-mid3-1.png" width="100%" />
+
+### Mid - 4
+
+``` r
+library("hues")
+swatch(get_retro_pal("mid4"))
+```
+
+<img src="man/figures/README-mid4-1.png" width="100%" />
+
+### Dark - 5
+
+``` r
+library("hues")
+swatch(get_retro_pal("dark5"))
+```
+
+<img src="man/figures/README-dark5-1.png" width="100%" />
+
+### Dark - 6
+
+``` r
+library("hues")
+swatch(get_retro_pal("dark6"))
+```
+
+<img src="man/figures/README-dark6-1.png" width="100%" />
+
+### Categorical
+
+``` r
+library("hues")
+swatch(get_retro_pal("categorical"))
+```
+
+<img src="man/figures/README-categorical-1.png" width="100%" />

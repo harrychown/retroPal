@@ -7,7 +7,7 @@
 get_retro_pal(name)
 }
 \arguments{
-\item{name}{Palette name (e.g. "orange_scheme", "combo_dark").}
+\item{name}{Palette name (e.g. "orange", "dark5", "categorical").}
 }
 \value{
 A character vector of hex colours.
