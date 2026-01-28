@@ -14,7 +14,11 @@ The goal of retroPal is to …
 You can install the development version of retroPal like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# install.packages("pak")
+pak::pak("harrychown/retroPal")
+# or
+# install.packages("remotes")
+remotes::install_github("harrychown/retroPal")
 ```
 
 ## Example
@@ -22,8 +26,11 @@ You can install the development version of retroPal like so:
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(retroPal)
+devtools::load_all()
+#> ℹ Loading retroPal
 ## basic example code
+retro_pals$retro_three_categories
+#> NULL
 ```
 
 What is special about using `README.Rmd` instead of just `README.md`?

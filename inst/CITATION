@@ -1,0 +1,12 @@
+bibentry(
+  bibtype = "Misc",
+  title   = "retroPal: Retro colour palettes for R",
+  author  = person(
+    given  = "Harry",
+    family = "Chown"
+  ),
+  year    = "2026",
+  url     = "https://github.com/harrychown/retroPal",
+  note    = "GitHub repository"
+)
+
