@@ -2,5 +2,6 @@
 
 export(get_retro_pal)
 export(orange)
+export(pub_theme)
 export(scale_colour_retro)
 export(scale_fill_retro)
