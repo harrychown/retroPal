@@ -1,9 +1,9 @@
 Package: retroPal
-Title: What the Package Does (One Line, Title Case)
-Version: 0.1.0
+Title: Retro colourscheme and publication-ready plot themes
+Version: 0.2.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Harry", "Chown", , "h.chown@imperial.ac.uk", role = c("aut", "cre"))
+Description: Retro colourscheme for standard plots and large categorical sets. Publication-ready customisable theme for rapid plot formatting.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
