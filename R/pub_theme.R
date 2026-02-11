@@ -44,6 +44,7 @@ pub_theme <- function(
     panel.background = ggplot2::element_rect(fill = "white", colour = NA_character_),
     panel.border     = ggplot2::element_rect(fill = "white", colour = NA_character_),
 
+    text = ggplot2::element_text(size=5, colour = "black", family = font_family),
     axis.title.y = ggtext::element_markdown(size = 6, colour = "black", family = font_family),
     axis.text.y  = ggplot2::element_text(size = 5, colour = "black", family = font_family),
     axis.title.x = ggtext::element_markdown(size = 6, colour = "black", family = font_family),

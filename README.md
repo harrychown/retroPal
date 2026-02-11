@@ -28,6 +28,7 @@ This is a basic example of the “brown” colourscheme
 
 ``` r
 library(ggplot2)
+#> Warning: package 'ggplot2' was built under R version 4.5.2
 library(retroPal)
 ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + geom_bar() + scale_fill_manual(values = get_retro_pal("brown")[c(2,4,6)]) 
 ```

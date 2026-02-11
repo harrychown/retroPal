@@ -1,6 +1,6 @@
 Package: retroPal
 Title: Retro colourscheme and publication-ready plot themes
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: 
     person("Harry", "Chown", , "h.chown@imperial.ac.uk", role = c("aut", "cre"))
 Description: Retro colourscheme for standard plots and large categorical sets. Publication-ready customisable theme for rapid plot formatting.
